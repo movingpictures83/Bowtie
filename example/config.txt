@@ -1,0 +1,2 @@
+Prefix plugins/Bowtie/example
+Plugin Bowtie inputfile parameters.txt outputfile output

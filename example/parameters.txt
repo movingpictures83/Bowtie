@@ -1,0 +1,2 @@
+contigs	plugins/Bowtie/example/assembly.fa
+sequences	plugins/Bowtie/example/3.sam
