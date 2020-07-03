@@ -1,7 +1,9 @@
+# Bowtie
 # Language: C++
 # Input: TXT
 # Output: prefix
 # Tested with: PluMA 1.0, GCC 4.8.4
+# Dependency: Bowtie 2.2.3
 
 PluMA plugin that interfaces to Bowtie (Langmead et al, 2009).
 
