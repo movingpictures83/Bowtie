@@ -35,9 +35,19 @@ myCommand += "-x";
 myCommand += " ";
 myCommand += outputfile+".idx";
 myCommand += " ";
+if (parameters.count("sequences") != 0) {
 myCommand += "-U";
 myCommand += " ";
 myCommand += parameters["sequences"] + " ";
+}
+else {
+myCommand += "-M1";
+myCommand += " ";
+myCommand += parameters["sequences1"] + " ";
+myCommand += "-M2";
+myCommand += " ";
+myCommand += parameters["sequences2"] + " ";
+}
 myCommand += "-S";
 myCommand += " ";
 myCommand += outputfile+".sam0";
