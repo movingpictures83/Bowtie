@@ -6,6 +6,7 @@
 void BowtiePlugin::input(std::string file) {
  inputfile = file;
  std::ifstream ifile(inputfile.c_str(), std::ios::in);
+ std::cout << file << std::endl;
  while (!ifile.eof()) {
    std::string key, value;
    ifile >> key;
@@ -22,7 +23,7 @@ void BowtiePlugin::output(std::string file) {
  std::string myCommand = "";
 myCommand +=  "bowtie2-build";
 myCommand += " ";
-myCommand += parameters["contigs"];
+myCommand += std::string(PluginManager::prefix())+parameters["contigs"];
 myCommand += " ";
 myCommand += outputfile+".idx";
 system(myCommand.c_str());
@@ -41,10 +42,10 @@ myCommand += " ";
 myCommand += parameters["sequences"] + " ";
 }
 else {
-myCommand += "-M1";
+myCommand += "-1";
 myCommand += " ";
 myCommand += parameters["sequences1"] + " ";
-myCommand += "-M2";
+myCommand += "-2";
 myCommand += " ";
 myCommand += parameters["sequences2"] + " ";
 }
